@@ -14,22 +14,22 @@ document.addEventListener('DOMContentLoaded',function(){
     
     // Validation Variables
     let isValid = true;
-    let message = [];
+    let messages = [];
 
     //Validations
     if(username.length < 3){
       isValid = false;
-      message.push('Username must be at least 3 letters !');
+      messages.push('Username must be at least 3 letters !');
     }
 
     if(!email.includes('@') || !email.includes('.')){
       isValid = false;
-      message.push('Please enter a valid email address !');
+      messages.push('Please enter a valid email address !');
     }
 
     if(password.length < 8){
       isValid = false;
-      message.push('Password must be at least 8 letters !');
+      messages.push('Password must be at least 8 letters !');
     }    
 
     //Feedback Display
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded',function(){
       feedbackDiv.innerHTML = 'Registration successful!';
       feedbackDiv.color = '#28a745';
     } else{
-      feedbackDiv.innerHTML = message.join('<br>');
+      feedbackDiv.innerHTML = messages.join('<br>');
       feedbackDiv.color = '#dc3545';
     }
 
