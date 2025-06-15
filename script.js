@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded',function(){
     feedbackDiv.style.display = "block";
 
     if(isValid){
-      feedbackDiv.innerHTML = 'Registration successful!';
+      feedbackDiv.textContent = 'Registration successful!';
       feedbackDiv.color = "#28a745";
     } else{
-      feedbackDiv.innerHTML = messages.join('<br>');
+      feedbackDiv.textContent = messages.join('<br>');
       feedbackDiv.color = "#dc3545";
     }
 
