@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded',function(){
       messages.push('Username must be at least 3 letters !');
     }
 
-    if(!email.includes('@') || !email.includes('.')){
+    if(!email.includes("@") || !email.includes(".")){
       isValid = false;
       messages.push('Please enter a valid email address !');
     }
@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded',function(){
     feedbackDiv.style.display = "block";
 
     if(isValid){
-      feedbackDiv.textContent = 'Registration successful!';
-      feedbackDiv.color = "#28a745";
+      feedbackDiv.innerHTML = 'Registration successful!';
+      feedbackDiv.style.color = "#28a745";
     } else{
-      feedbackDiv.textContent = messages.join('<br>');
-      feedbackDiv.color = "#dc3545";
+      feedbackDiv.innerHTML = messages.join('<br>');
+      feedbackDiv.style.color = "#dc3545";
     }
 
   });
